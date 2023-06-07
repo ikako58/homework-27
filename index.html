@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="script.js">
+  <script>
+    function removeButton() {
+      var button = document.getElementById("myButton");
+      button.remove();
+    }
+  </script>
+   <script>
+    function addImage() {
+      var img = document.createElement("img");
+      img.setAttribute("src", "https://www.simplilearn.com/ice9/free_resources_article_thumb/Become_a_Front_End_Developer.jpg");
+      document.body.appendChild(img);
+    }
+  </script>
+   <script>
+    function addElement() {
+      var input = document.createElement("input");
+      var button = document.createElement("button");
+      var paragraph = document.createElement("p");
+
+      button.textContent = "დამატება";
+      button.addEventListener("click", function() {
+        var value = input.value;
+        paragraph.textContent = value;
+        document.body.appendChild(paragraph);
+        input.value = "";
+      });
+
+      document.body.appendChild(input);
+      document.body.appendChild(button);
+    }
+  </script>
+</head>
+<body>
+  <button id="myButton" onclick="removeButton()">ღილაკი</button>
+  <button onclick="addImage()">სურათის ჩამოტვირთვა</button>
+  <button onclick="addElement()">ელემენტის დამატება</button>
+</body>
+</html>
